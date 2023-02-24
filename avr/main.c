@@ -2,6 +2,7 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <avr/sleep.h>
+#include <stdlib.h>
 
 void tune(uint8_t pitch)
 {
