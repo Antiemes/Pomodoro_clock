@@ -64,7 +64,7 @@ ISR (PCINT0_vect)
 
 int main(void)
 {
-  DDRB = _BV(PB0) | _BV(PB1);
+  DDRB = _BV(PB0) | _BV(PB1) | _BV(PB2);
   PORTB = 0;
   ACSR = 0; // clear register
 
