@@ -31,7 +31,7 @@ difference()
     for (m=[0, 1])
     mirror([0, m, 0])
     for (of=[20, 60])
-    translate([of, 8, 0])
+    translate([of, 8.5, 0])
     difference()
     {
       linear_extrude(height=8, center=true) polygon(points=[[0, 7], [16, 7], [12, 0], [4, 0]]);
