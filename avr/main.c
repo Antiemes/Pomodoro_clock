@@ -74,24 +74,26 @@ int main(void)
 
   while(1)
   {
-  for (sec=0; sec<3; sec++)
-  {
-    PORTB = 0b00000001;
-    _delay_us(300);
-    PORTB = 0b00000000;
-    _delay_ms(500);
-    PORTB = 0b00000010;
-    _delay_us(300);
-    PORTB = 0b00000000;
-    _delay_ms(500);
-  }
+    for (sec=0; sec<10; sec++)
+    {
+      PORTB = 0b00000001;
+      _delay_us(300);
+      PORTB = 0b00000000;
+      _delay_ms(500);
+      PORTB = 0b00000010;
+      _delay_us(300);
+      PORTB = 0b00000000;
+      _delay_ms(500);
+    }
 
-  tune(rand() % 5);
-  tune(rand() % 5);
-  tune(rand() % 5);
-  tune(rand() % 5);
-  tune(rand() % 5);
+    tune(rand() % 5);
+    tune(rand() % 5);
+    tune(rand() % 5);
+    tune(rand() % 5);
+    tune(rand() % 5);
 
-  PORTB = 0b00000000;
+    PORTB = 0b00000000;
+    set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+    sleep_mode();
   }
 }
